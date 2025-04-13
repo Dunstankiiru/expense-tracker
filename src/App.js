@@ -30,7 +30,7 @@ function App() {
 
   const filteredExpenses = expenses.filter((expense) => {
     return (
-      expense.name.toLowerCase().includes(searchTerm) || // search by name
+      expense.name.toLowerCase().includes(searchTerm) ||
       expense.description.toLowerCase().includes(searchTerm) 
     );
   });

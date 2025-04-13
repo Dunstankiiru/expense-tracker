@@ -1,7 +1,6 @@
 function SearchBar({ onSearch }) {
   return (
     <div className="searchBar">
-      <label htmlFor="search">Search</label>
       <input
         type="search"
         id="search"
