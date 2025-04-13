@@ -31,26 +31,45 @@ h1 {
 /* Form styling */
 .expense-form {
   flex: 1;
-  max-width: 300px;
+  min-width: 400px;
   background-color: #fafafa;
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 10px;
   border: 1px solid #ddd;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 .expense-form h2 {
   margin-top: 0;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.expense-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #444;
 }
 
 .expense-form input,
+.expense-form select,
 .expense-form button {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 1rem;
-  border: 1px solid #ccc;
+  padding: 12px;
+  margin-bottom: 1.25rem;
+  border: 1px solid #ddd;
   border-radius: 6px;
   font-size: 1rem;
+  transition: all 0.2s ease;
+}
+
+.expense-form input:focus,
+.expense-form select:focus {
+  outline: none;
+  border-color: #666;
+  box-shadow: 0 0 0 2px rgba(0,0,0,0.1);
 }
 
 .expense-form button {
@@ -59,41 +78,72 @@ h1 {
   border: none;
   cursor: pointer;
   font-weight: bold;
-  transition: background-color 0.3s ease;
+  padding: 14px;
+  font-size: 1.05rem;
+  transition: all 0.2s ease;
 }
 
 .expense-form button:hover {
   background-color: #333;
+  transform: translateY(-1px);
 }
 
 /* Table styling */
 .expense-table-wrapper {
-  flex: 2;
+  flex: 3;
   width: 100%;
   overflow-x: auto;
+  margin-left: 2rem;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
   background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 th,
 td {
   text-align: left;
-  padding: 12px 15px;
-  border-bottom: 1px solid #ddd;
+  padding: 14px 18px;
+  border-bottom: 1px solid #eee;
 }
 
 th {
   background-color: #000;
   color: white;
   font-weight: bold;
+  position: sticky;
+  top: 0;
+}
+
+tr {
+  transition: background-color 0.2s ease;
 }
 
 tr:hover {
-  background-color: #f1f1f1;
+  background-color: #f8f8f8;
+}
+
+tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .content {
+    flex-direction: column;
+  }
+  
+  .expense-form {
+    min-width: 100%;
+    margin-bottom: 2rem;
+  }
+  
+  .expense-table-wrapper {
+    margin-left: 0;
+  }
 }
 
 /* Search input (if added later) */
