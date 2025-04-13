@@ -1,7 +1,4 @@
 # Expense Tracker Application
-
-[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://expense-tracker-delta-coral.vercel.app/)
-
 A React-based web application for tracking personal expenses with search and filtering capabilities.
 
 ➡️ **Live Demo:** [https://expense-tracker-delta-coral.vercel.app/](https://expense-tracker-delta-coral.vercel.app/)
@@ -18,7 +15,7 @@ A React-based web application for tracking personal expenses with search and fil
 ## Technologies Used
 
 - React.js
-- JavaScript (ES6+)
+- JavaScript
 - CSS
 - HTML5
 
@@ -41,15 +38,11 @@ expense-tracker/
 └── README.md                # This file
 ```
 
-## Screenshots
-
-![Expense Tracker Screenshot](public/screenshot.png) *Add screenshot file later*
-
 ## Installation & Local Development
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/expense-tracker.git
+git clone https://github.com/Dunstankiiru/expense-tracker.git
 cd expense-tracker
 ```
 
