@@ -1,15 +1,14 @@
-import React from 'react';
-
-function SearchBar({ searchTerm, setSearchTerm }) {
-    return (
-        <input
-            type="text"
-            className="search-bar"
-            placeholder="Search expenses..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-        />
-    );
+function SearchBar({ onSearch }) {
+  return (
+    <div className="searchBar">
+      <label htmlFor="search">Search</label>
+      <input
+        type="search"
+        id="search"
+        placeholder="search expense.."
+        onChange={(e) => onSearch(e.target.value)}
+      />
+    </div>
+  );
 }
-
 export default SearchBar;

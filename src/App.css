@@ -1,4 +1,4 @@
-/* Global styles */
+
 body {
   margin: 0;
   font-family: Arial, sans-serif;
@@ -149,6 +149,7 @@ tr:nth-child(even) {
 /* Search input (if added later) */
 .search-bar {
   margin: 1rem 0;
+  margin-bottom: 2px;
 }
 
 .search-bar input {

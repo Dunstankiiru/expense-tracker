@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import ExpenseForm from './components/ExpenseForm';
 import ExpenseTable from './components/ExpenseTable';
 import SearchBar from './components/SearchBar';
+import expensesData from './Data/expensesData';
 import './App.css';
 
 function App() {
-  const [expenses, setExpenses] = useState([]);
+  const [expenses, setExpenses] = useState(expensesData);
   const [searchTerm, setSearchTerm] = useState('');
-  const [sortKey, setSortKey] = useState('');
 
   const handleAddExpense = (expense) => {
     setExpenses([...expenses, expense]);
@@ -17,29 +17,38 @@ function App() {
     setExpenses(expenses.filter(expense => expense.id !== id));
   };
 
+  const handleSearch = (term) => {
+    setSearchTerm(term.toLowerCase()); 
+  };
+
   const handleSort = (key) => {
-    setSortKey(key);
     const sorted = [...expenses].sort((a, b) =>
-      a[key].toString().localeCompare(b[key].toString())
+      a[key]?.toString().localeCompare(b[key]?.toString())
     );
     setExpenses(sorted);
   };
 
-  const filteredExpenses = expenses.filter(exp =>
-    exp.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    exp.description.toLowerCase().includes(searchTerm.toLowerCase())
-  );
+  const filteredExpenses = expenses.filter((expense) => {
+    return (
+      expense.name.toLowerCase().includes(searchTerm) || // search by name
+      expense.description.toLowerCase().includes(searchTerm) 
+    );
+  });
 
   return (
     <div className="container">
       <h1>Expense Tracker</h1>
+      <p>Start keeping control of your finances</p>
       <div className="content">
         <ExpenseForm onAddExpense={handleAddExpense} />
-        <ExpenseTable
-          expenses={filteredExpenses}
-          onDelete={handleDelete}
-          onSort={handleSort}
-        />
+        <div className="search-table-container">
+          <SearchBar onSearch={handleSearch} />
+          <ExpenseTable
+            expenses={filteredExpenses}
+            onDelete={handleDelete}
+            onSort={handleSort}
+          />
+        </div>
       </div>
     </div>
   );

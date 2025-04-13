@@ -17,7 +17,12 @@ function ExpenseForm({ onAddExpense }) {
         e.preventDefault();
         if (formData.name && formData.amount) {
             onAddExpense({ ...formData, id: Date.now() });
-            setFormData({ name: '', description: '', category: '', amount: '', date: '' });
+            setFormData({ 
+                name: '', 
+                description: '',
+                category: '', 
+                amount: '', 
+                date: '' });
         }
     };
 
