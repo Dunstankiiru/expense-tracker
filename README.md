@@ -1,5 +1,6 @@
 # Expense Tracker Application
 
+[![Live Demo](https://img.shields.io/badge/demo-live-brightgreen)](https://expense-tracker-delta-coral.vercel.app/)
 
 A React-based web application for tracking personal expenses with search and filtering capabilities.
 
@@ -17,7 +18,7 @@ A React-based web application for tracking personal expenses with search and fil
 ## Technologies Used
 
 - React.js
-- JavaScript 
+- JavaScript (ES6+)
 - CSS
 - HTML5
 
@@ -39,6 +40,10 @@ expense-tracker/
 ├── package.json             # Project dependencies
 └── README.md                # This file
 ```
+
+## Screenshots
+
+![Expense Tracker Screenshot](public/screenshot.png) *Add screenshot file later*
 
 ## Installation & Local Development
 
@@ -76,10 +81,7 @@ This project is deployed on Vercel. To deploy your own version:
 - `npm run build`: Builds the app for production
 - `npm run eject`: Ejects from Create React App configuration
 
-## Contributing
-
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
 ## License
 
-[MIT](https://choosealicense.com/licenses/mit/)
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
